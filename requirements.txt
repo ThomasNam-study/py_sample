@@ -1,5 +1,6 @@
 beautifulsoup4
 requests
 twitter
+tweepy
 pymysql
 pymongo
