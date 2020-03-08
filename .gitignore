@@ -1,0 +1,7 @@
+.idea
+venv/
+my.db
+test.csv
+ioSample/test.csv
+ioSample/top.json
+sqliteSample/my.db
