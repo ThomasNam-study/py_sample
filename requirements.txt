@@ -5,3 +5,6 @@ tweepy
 pymysql
 pymongo
 google-api-python-client
+robobrowser
+chardet
+Werkzeug==0.16.1
