@@ -6,9 +6,11 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 
+
 def make_links_absolute(soup, url):
     for tag in soup.findAll('a', href=True):
         tag['href'] = urljoin(url, tag['href'])
+
 
 def scrape_list_page(r):
     # 파서 생성
@@ -20,6 +22,7 @@ def scrape_list_page(r):
         url = a.get("href")
         yield url
 
+
 def scrape_detail_page(response):
     soup = BeautifulSoup(response.text, 'html.parser')
 
@@ -28,10 +31,12 @@ def scrape_detail_page(response):
         'title': soup.select_one('.store_product_info_box h3').string,
         'price': soup.select_one('.pbr strong').string,
         'key': extract_key(response.url),
-        'content': [normalize_space(p.string) for p in soup.select('#tabs_3 .hanbit_edit_view p') if normalize_space(p.string) != '']
+        'content': [normalize_space(p.string) for p in soup.select('#tabs_3 .hanbit_edit_view p') if
+                    normalize_space(p.string) != '']
     }
 
     return ebook
+
 
 def normalize_space(s):
     if not s:
@@ -39,10 +44,12 @@ def normalize_space(s):
 
     return re.sub('\\s+', ' ', s).strip()
 
+
 def extract_key(url):
     m = re.search(r"p_code=(.+)", url)
 
     return m.group(1)
+
 
 def main():
     client = pymongo.MongoClient('localhost', 27017)
@@ -71,6 +78,7 @@ def main():
         print(ebook)
 
     client.close()
+
 
 if __name__ == '__main__':
     main()
