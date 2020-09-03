@@ -7,7 +7,8 @@ def scrape_news_list_page(response):
     root = lxml.html.fromstring(response.content)
 
     for a in root.cssselect('._NM_UI_PAGE_CONTAINER'):
-        print(a)
+        for b in a.cssselect('.tile_view .thumb_area div div a.btn_popup[data-clk="logo"]'):
+            print(b.get('href'))
 
     return urls
 
