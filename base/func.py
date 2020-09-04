@@ -21,3 +21,6 @@ args_func('kim', 'park', 'lee')
 args_func('kim', 'park', 'lee', test="우하하")
 
 nested_func(10000)
+
+lambda_func = lambda x: x * 10
+print(">>>", lambda_func(10))
