@@ -1,4 +1,4 @@
-from selenium import webdriver
+from selenium_test import webdriver
 
 # PhantomJS 모듈을 WebDriver 객체를 생성
 driver = webdriver.PhantomJS()

@@ -1,11 +1,11 @@
 import sys
 import time
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
+from selenium_test import webdriver
+from selenium_test.webdriver.common.by import By
+from selenium_test.webdriver.common.keys import Keys
+from selenium_test.webdriver.support import expected_conditions as EC
+from selenium_test.webdriver.support.wait import WebDriverWait
 
 from key import NAVER_ID, NAVER_PW
 

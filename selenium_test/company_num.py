@@ -1,7 +1,7 @@
 import time
 
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+from selenium_test import webdriver
+from selenium_test.webdriver.common.keys import Keys
 
 # PhantomJS 모듈을 WebDriver 객체를 생성
 driver = webdriver.PhantomJS()
