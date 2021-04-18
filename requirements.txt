@@ -15,4 +15,4 @@ SPARQLWrapper~=1.8.5
 lxml~=4.5.2
 cssselect
 fake-useragent
-selenium
+xlsxwriter
