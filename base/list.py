@@ -2,6 +2,10 @@ def myhello1():
     pass
 
 
+total_uf = 20043
+print(total_uf / 2)
+
+
 a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 b = []
 
